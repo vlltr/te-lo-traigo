@@ -17,3 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('dashboard');
 })->name('dashboard');
+
+
+Route::resource('product_types', \App\Http\Controllers\ProductTypeController::class);

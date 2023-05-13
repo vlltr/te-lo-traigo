@@ -20,3 +20,4 @@ Route::get('/', function () {
 
 
 Route::resource('product_types', \App\Http\Controllers\ProductTypeController::class);
+Route::resource('quotes', \App\Http\Controllers\QuoteController::class)->only('create','store', 'show');

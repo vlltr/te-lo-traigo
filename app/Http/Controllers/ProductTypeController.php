@@ -66,6 +66,6 @@ class ProductTypeController extends Controller
         $productType->delete();
 
         return redirect()->route('product_types.index')
-            ->with('success', 'Product Type deleted successfully.');
+            ->with('success', 'Product deleted successfully.');
     }
 }

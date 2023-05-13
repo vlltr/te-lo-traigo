@@ -12,11 +12,33 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        $initialProductTypes = [
+            [
+                "name" => "Computadoras",
+                "freight" => 1.00,
+                "import_cost" => 2.00,
+                "sure" => 1.00,
+                "tax" => 13.00
+            ],
+            [
+                "name" => "Ropa",
+                "freight" => 1.00,
+                "import_cost" => 5.00,
+                "sure" => 2.00,
+                "tax" => 15.00
+            ],
+            [
+                "name" => "Repuestos para vehículos",
+                "freight" => 6.00,
+                "import_cost" => 4.00,
+                "sure" => 10.00,
+                "tax" => 13.00
+            ]
+        ];
+
+        foreach ($initialProductTypes as $type) {
+            \App\Models\ProductType::create($type);
+        }
     }
 }
